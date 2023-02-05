@@ -31,13 +31,12 @@ export const usersSlice = createSlice({
     },
   },
   extraReducers(builder) {
-    // fetchUsers
+    // fetchUsers from usersThunk
     builder.addCase(userActions.fetchUsers.pending, (state) => {
       state.status = ResponseStatus.Pending;
     });
 
     builder.addCase(userActions.fetchUsers.fulfilled, (state, action) => {
-      console.log(state, action.payload);
       state.users = action.payload;
       state.status = ResponseStatus.Success;
     });

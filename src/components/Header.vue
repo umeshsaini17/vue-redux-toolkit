@@ -25,8 +25,6 @@ import { ref } from 'vue';
 const props = defineProps(['selected']);
 const emit = defineEmits(['menuClick']);
 
-console.log(props.selected);
-
 const menu = ref<Menu[]>([]);
 menu.value = [
   { name: 'Simple Reducer', id: 'simple' },

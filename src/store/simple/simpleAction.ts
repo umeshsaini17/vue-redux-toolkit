@@ -1,9 +1,5 @@
 import { createAction } from "@reduxjs/toolkit";
-
-// Helper method used to infer action type.
-function withPayloadType<T>() {
-  return (t: T) => ({ payload: t })
-}
+import { withPayloadType } from "../storePlugin";
 
 // actions
 const toggleValue = createAction('toggleValue', withPayloadType<boolean>());
